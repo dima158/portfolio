@@ -1,3 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.header {
+  height: 100vh;
+  background: #393;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__offer-button {
+    margin-left: 50vw;
+  }
+}
