@@ -3,17 +3,24 @@ import './stylesheets/main.scss';
 import '@babel/polyfill';
 
 import {log, createEl, appendTo, text, css} from "./js/helpers";
-import './js/functions'; // Empty
+import {} from './js/functions'; // Empty
 import './js/packedges';
 
 import Interface from './js/classes/Interface';
 
 Interface.activate(); // Empty
 
-const div = createEl('div');
-text(div, 'myDIV');
-css(div, {
-    color: 'red',
-    background: 'blue'
-});
-appendTo(document.body, div);
+import {header} from "./js/components/header";
+
+const links = [
+    {
+        path: "/",
+        name: "home"
+    },
+    {
+        path: "/about",
+        name: "about as"
+    },
+];
+
+appendTo(document.body, header(links));
