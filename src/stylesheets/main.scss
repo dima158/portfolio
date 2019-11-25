@@ -23,11 +23,15 @@
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/footer';
+  'layout/footer',
+  'layout/main-section';
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/arrow-down',
+  'components/button-empty',
+  'components/button-action';
 
 // 6. Page-specific styles
 @import

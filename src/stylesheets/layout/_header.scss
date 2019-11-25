@@ -1,3 +1,41 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+$menuFontSize: 20px;
+$headerMaxWidth: 1700px;
+$headerBackgroundColor: #fff;
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $headerBackgroundColor;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: $headerMaxWidth;
+  }
+
+  &__logo {
+    width: 150px;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px;
+    margin: 0 20px;
+    font-size: $menuFontSize;
+    font-weight: bold;
+  }
+}
