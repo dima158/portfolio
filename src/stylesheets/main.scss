@@ -28,7 +28,9 @@
   'layout/portfolio',
   'layout/pracing-plan',
   'layout/team',
-  'layout/blog';
+  'layout/blog',
+  'layout/contact-us',
+  'layout/licence';
 
 // 5. Components
 @import
@@ -41,7 +43,9 @@
   'components/price-card',
   'components/members',
   'components/person',
-  'components/article';
+  'components/article',
+  'components/contact',
+  'components/form';
 
 // 6. Page-specific styles
 @import
