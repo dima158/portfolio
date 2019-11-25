@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button-empty component.
+// -----------------------------------------------------------------------------
+
+.button-action {
+  text-transform: uppercase;
+  padding: 20px 50px;
+  background-color: #00897b;
+  font-size: 20px;
+  color: #fff;
+  border: 4px solid #00897b;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

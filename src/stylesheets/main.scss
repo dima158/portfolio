@@ -23,13 +23,14 @@
 // 4. Layout-related sections
 @import
   'layout/header',
+  'layout/first',
   'layout/about-us',
   'layout/our-services',
   'layout/portfolio',
   'layout/pracing-plan',
   'layout/team',
   'layout/blog',
-  'layout/contact-us',
+  //'layout/contact-us',
   'layout/licence';
 
 // 5. Components
@@ -45,7 +46,10 @@
   'components/person',
   'components/article',
   'components/contact',
-  'components/form';
+  'components/form',
+  'components/button',
+  'components/button-empty',
+  'components/button-action';
 
 // 6. Page-specific styles
 @import
