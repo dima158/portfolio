@@ -3,17 +3,16 @@
 // -----------------------------------------------------------------------------
 
 $textColor: #fff;
-$headerFontSize: 60px;
+$titleFontSize: 60px;
 $textFontSize: 22px;
 
-.main-section {
+.first {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: relative;
   height: 100vh;
-  padding-bottom: 100px;
   background: url('../images/main.jpeg') no-repeat;
   background-size: cover;
   z-index: -2;
@@ -27,18 +26,22 @@ $textFontSize: 22px;
     z-index: -1;
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
-    color: $textColor;
+  &__footer {
+    margin-bottom: 70px;
   }
+}
 
-  &__header {
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: $textColor;
+
+  &__title {
     margin: 30px 0;
-    font-size: $headerFontSize;
+    font-size: $titleFontSize;
   }
 
   &__text {
@@ -48,9 +51,32 @@ $textFontSize: 22px;
   &__buttons {
     margin: 100px 0;
   }
+}
 
-  &__button {
+.action-buttons {
+  padding: 10px 20px;
+
+  &__btn {
     display: inline-block;
     margin: 0 15px;
+  }
+}
+
+.arrow-down {
+  padding: 10px;
+  overflow: visible;
+
+  &__button {
+    width: 20px;
+    height: 20px;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    transform: rotate(45deg);
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
