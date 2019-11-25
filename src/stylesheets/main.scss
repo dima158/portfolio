@@ -24,14 +24,17 @@
 @import
   'layout/header',
   'layout/about-us',
-  'layout/our-services';
+  'layout/our-services',
+  'layout/portfolio';
 
 // 5. Components
 @import
   'components/button', // Example
   'components/title',
   'components/advantage',
-  'components/service';
+  'components/service',
+  'components/projects',
+  'components/project';
 
 // 6. Page-specific styles
 @import
