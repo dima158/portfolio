@@ -2,7 +2,6 @@
 // This file contains all styles related to the main-section of the site/application.
 // -----------------------------------------------------------------------------
 
-$textColor: #fff;
 $titleFontSize: 60px;
 $textFontSize: 22px;
 
@@ -37,7 +36,7 @@ $textFontSize: 22px;
   align-items: center;
   justify-content: center;
   min-height: 400px;
-  color: $textColor;
+  color: v(bg-clr);
 
   &__title {
     margin: 30px 0;
@@ -72,7 +71,7 @@ $textFontSize: 22px;
     border-right: 6px solid #fff;
     border-bottom: 6px solid #fff;
     border-radius: 4px;
-    color: #fff;
+    color: v(bg-clr);
     transform: rotate(45deg);
 
     &:hover {
