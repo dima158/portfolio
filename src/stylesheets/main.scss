@@ -27,7 +27,8 @@
   'layout/our-services',
   'layout/portfolio',
   'layout/pracing-plan',
-  'layout/team';
+  'layout/team',
+  'layout/blog';
 
 // 5. Components
 @import
@@ -39,7 +40,8 @@
   'components/project',
   'components/price-card',
   'components/members',
-  'components/person';
+  'components/person',
+  'components/article';
 
 // 6. Page-specific styles
 @import
