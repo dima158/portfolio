@@ -1,11 +1,13 @@
-.about-us {
+.pricing-plan {
   padding-top: 125px;
   padding-bottom: 125px;
+  background: v(second-bg-clr);
 
-  &__advantages {
+  &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     gap: 30px;
-    padding-top: 110px;
+    padding-top: 120px;
   }
 }
