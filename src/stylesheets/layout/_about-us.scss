@@ -1,0 +1,11 @@
+.about-us {
+  padding-top: 125px;
+  padding-bottom: 125px;
+
+  &__advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-top: 110px;
+  }
+}

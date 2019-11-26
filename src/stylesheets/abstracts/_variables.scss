@@ -1,0 +1,40 @@
+// Use v(bg-color) to get var(--bg-color)
+// Use v-get(bg-color) to get $bg-color
+$v-globals: (
+
+  /// Regular font family
+  text-font-stack: ('Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif),
+  
+  /// Code (monospace) font family
+  code-font-stack: ('Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace),
+  
+  
+  /// Base font size
+  base-font-size: 16px,
+  
+  
+  /// Colors
+  text-clr: #212121,
+
+  bg-clr: #ffffff,
+  second-bg-clr: #f0f1f1,
+
+  brand-clr: #00897b,
+  light-brand-clr: #e4fdf9,
+
+  second-brand-clr: #3949ab,
+  
+
+  /// Container's minimum width
+  min-width: 320px,
+  max-width: 1180px,
+  min-height: 750px
+
+) !default;
+
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);

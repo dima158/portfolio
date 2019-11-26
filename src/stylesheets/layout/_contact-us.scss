@@ -1,0 +1,12 @@
+.contact-us {
+  padding-top: 125px;
+  padding-bottom: 110px;
+
+  &__contact-list {
+    padding-top: 100px;
+    padding-bottom: 75px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+  }
+}

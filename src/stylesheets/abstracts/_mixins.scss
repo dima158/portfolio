@@ -1,0 +1,65 @@
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+/// Place child img as a full screen background
+/// @param {Color} $safe-bg-color
+@mixin full-screen-bg($safe-bg-color: white) {
+  position: relative;
+  &__background {
+    background: $safe-bg-color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -10;
+  }
+}
+
+/// Center children vertically, horizontally or both
+/// @param {String} $position
+@mixin center($position: both) {
+  display: flex;
+  @if $position == 'both' {
+    align-items: center;
+    justify-content: center;
+  } @else if $position == 'vertical' {
+    align-items: center;
+  } @else if $position == 'horizontal' {
+    justify-content: center;
+  } @else if $position == 'none' {
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+}
+
+/// Initialize css variables
+@mixin v-init($vs) {
+  @each $property, $value in $vs {
+    --#{$property}: #{$value};
+  }
+}
+
+/// @param {color} $fill
+/// @param {color} $color
+/// @param {color} $border
+@mixin button($fill: transparent, $color: v(text-clr), $border: v(text-clr)) {
+  text-transform: uppercase;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  letter-spacing: 0.025em;
+  font-weight: 600;
+  color: $color;
+  background: $fill;
+  border: 0.1em solid $border;
+
+}

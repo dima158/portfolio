@@ -1,0 +1,13 @@
+.our-services {
+  padding-top: 170px;
+  padding-bottom: 125px;
+  background: v(light-brand-clr);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    padding-top: 110px;
+  }
+}

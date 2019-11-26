@@ -1,0 +1,21 @@
+.container {
+  max-width: v(max-width);
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @each $key, $value in $breakpoints {
+    @include respond-above($key) {
+      width: $value;
+    }
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.darkmode {
+  @include v-init((/* Some darkmode colors */));
+}
