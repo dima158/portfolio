@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel ./src/index.html --open",
-    "build": "parcel build ./src/index.html --public-url ./"
+    "start": "parcel ./src/*.html --open",
+    "build": "parcel build ./src/*.html --public-url ./"
   },
   "keywords": [],
   "license": "MIT",
@@ -27,7 +27,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "parcel-plugin-bp": "^1.4.0",
     "parcel-plugin-clean-dist": "0.0.6",
     "postcss-modules": "^1.4.1",

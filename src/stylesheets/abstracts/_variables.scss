@@ -14,12 +14,15 @@ $v-globals: (
   
   
   /// Colors
+  text-clr: #212121,
+
   bg-clr: #ffffff,
-  second-bg-clr: #122a44,
-  brand-clr: #1d4371,
-  second-brand-clr: #7dacc0,
-  strong-clr: #151515,
-  soft-clr: #e6e6e6,
+  second-bg-clr: #f0f1f1,
+
+  brand-clr: #00897b,
+  light-brand-clr: #e4fdf9,
+
+  second-brand-clr: #3949ab,
   
 
   /// Container's minimum width
@@ -28,3 +31,10 @@ $v-globals: (
   min-height: 750px
 
 ) !default;
+
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);

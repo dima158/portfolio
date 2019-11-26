@@ -23,11 +23,33 @@
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/footer';
+  'layout/first',
+  'layout/about-us',
+  'layout/our-services',
+  'layout/portfolio',
+  'layout/pracing-plan',
+  'layout/team',
+  'layout/blog',
+  'layout/contact-us',
+  'layout/licence';
 
 // 5. Components
 @import
-  'components/button';
+  'components/button', // Example
+  'components/title',
+  'components/advantage',
+  'components/service',
+  'components/projects',
+  'components/project',
+  'components/price-card',
+  'components/members',
+  'components/person',
+  'components/article',
+  'components/contact',
+  'components/form',
+  'components/button',
+  'components/button-empty',
+  'components/button-action';
 
 // 6. Page-specific styles
 @import
