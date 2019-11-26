@@ -48,3 +48,18 @@
     --#{$property}: #{$value};
   }
 }
+
+/// @param {color} $fill
+/// @param {color} $color
+/// @param {color} $border
+@mixin button($fill: transparent, $color: v(text-clr), $border: v(text-clr)) {
+  text-transform: uppercase;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  letter-spacing: 0.025em;
+  font-weight: 600;
+  color: $color;
+  background: $fill;
+  border: 0.1em solid $border;
+
+}
