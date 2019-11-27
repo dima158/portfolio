@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 
 $menuFontSize: 20px;
+$menuFontSizeTablet: 16px;
 $headerMaxWidth: 1700px;
 
 .header {
@@ -10,6 +11,7 @@ $headerMaxWidth: 1700px;
   justify-content: center;
   width: 100%;
   background-color: v(bg-clr);
+  z-index: 10;
 
   &__container {
     display: flex;
@@ -18,6 +20,10 @@ $headerMaxWidth: 1700px;
     padding: 10px 40px;
     width: 100%;
     max-width: $headerMaxWidth;
+
+    @media screen and (max-width: v-get(media-lg)) {
+      padding: 10px 20px;
+    }
   }
 }
 
@@ -29,25 +35,55 @@ $headerMaxWidth: 1700px;
     width: auto;
     max-height: 70px;
     margin-right: 10px;
+
+    @media screen and (max-width: v-get(media-lg)) {
+      max-height: 50px;
+    }
   }
 
   &__title {
     font-size: $menuFontSize;
     text-transform: uppercase;
     font-weight: bold;
+
+    @media screen and (max-width: v-get(media-lg)) {
+      font-size: $menuFontSizeTablet;
+    }
   }
 }
 
 .nav {
 
+  @media screen and (max-width: v-get(media-sm)) {
+    position: fixed;
+    left: 0; right: 0; top: 0; bottom: 0;
+    z-index: -1;
+  }
+
+  &_hide {
+    display: none;
+  }
+
   &__list {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    @media screen and (max-width: v-get(media-sm)) {
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
   }
 
   &__item {
     margin: 0 20px;
+
+    @media screen and (max-width: v-get(media-lg)) {
+      margin: 0 5px;
+    }
   }
 
   &__link {
@@ -56,9 +92,69 @@ $headerMaxWidth: 1700px;
     font-size: $menuFontSize;
     font-weight: bold;
 
+    @media screen and (max-width: v-get(media-lg)) {
+      font-size: $menuFontSizeTablet;
+    }
+
     &:hover, &:focus {
       cursor: pointer;
       color: red;
+    }
+  }
+}
+
+.mobile-nav-btn {
+  display: none;
+  position: relative;
+  height: 26px;
+  width: 35px;
+
+  @media screen and (max-width: v-get(media-sm)) {
+    display: block;
+  }
+
+  &__inner, &__inner:after, &__inner:before {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all .5s ease-in-out;
+  }
+
+  &__inner {
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+
+  &__inner:before {
+    top: -10px;
+  }
+
+  &__inner:after {
+    bottom: -10px;
+  }
+
+  &_active {
+
+    .mobile-nav-btn__inner, .mobile-nav-btn__inner:after, .mobile-nav-btn__inner:before {
+      top: 5px;
+    }
+
+    .mobile-nav-btn__inner {
+      background-color: transparent;
+    }
+
+    .mobile-nav-btn__inner:after {
+      transform: rotate(-45deg);
+    }
+
+    .mobile-nav-btn__inner:before {
+      transform: rotate(45deg);
     }
   }
 }

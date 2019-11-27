@@ -23,11 +23,16 @@ $v-globals: (
   light-brand-clr: #e4fdf9,
 
   second-brand-clr: #3949ab,
-  
 
   /// Container's minimum width
   min-width: 320px,
   max-width: 1180px,
-  min-height: 750px
+  min-height: 750px,
+
+  //Media size
+  media-xs: 576px,
+  media-sm: 768px,
+  media-md: 992px,
+  media-lg: 1200px,
 
 ) !default;
