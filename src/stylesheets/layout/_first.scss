@@ -19,7 +19,7 @@ $textFontSizePhone: 16px;
   &__footer {
     margin-bottom: 70px;
 
-    @media screen and (max-width: v-get(media-sm)) {
+    @include respond-below(sm) {
       margin-bottom: 30px;
     }
   }
@@ -38,11 +38,11 @@ $textFontSizePhone: 16px;
     margin: 30px 0;
     font-size: $titleFontSize;
 
-    @media screen and (max-width: v-get(media-lg)) {
+    @include respond-below(lg) {
       font-size: $titleFontSizeTablet;
     }
 
-    @media screen and (max-width: v-get(media-sm)) {
+    @include respond-below(sm) {
       font-size: $titleFontSizePhone;
     }
   }
@@ -50,7 +50,7 @@ $textFontSizePhone: 16px;
   &__text {
     font-size: $textFontSize;
 
-    @media screen and (max-width: v-get(media-sm)) {
+    @include respond-below(sm) {
       font-size: $textFontSizePhone;
     }
   }
@@ -58,7 +58,7 @@ $textFontSizePhone: 16px;
   &__buttons {
     margin: 40px 0;
 
-    @media screen and (max-width: v-get(media-sm)) {
+    @include respond-below(sm) {
       margin: 20px 0;
     }
   }

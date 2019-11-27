@@ -21,7 +21,7 @@ $headerMaxWidth: 1700px;
     width: 100%;
     max-width: $headerMaxWidth;
 
-    @media screen and (max-width: v-get(media-lg)) {
+    @include respond-below(lg) {
       padding: 10px 20px;
     }
   }
@@ -36,7 +36,7 @@ $headerMaxWidth: 1700px;
     max-height: 70px;
     margin-right: 10px;
 
-    @media screen and (max-width: v-get(media-lg)) {
+    @include respond-below(lg) {
       max-height: 50px;
     }
   }
@@ -46,7 +46,7 @@ $headerMaxWidth: 1700px;
     text-transform: uppercase;
     font-weight: bold;
 
-    @media screen and (max-width: v-get(media-lg)) {
+    @include respond-below(lg) {
       font-size: $menuFontSizeTablet;
     }
   }
@@ -54,7 +54,7 @@ $headerMaxWidth: 1700px;
 
 .nav {
 
-  @media screen and (max-width: v-get(media-sm)) {
+  @include respond-below(sm) {
     position: fixed;
     left: 0; right: 0; top: 0; bottom: 0;
     z-index: -1;
@@ -71,7 +71,7 @@ $headerMaxWidth: 1700px;
     justify-content: flex-end;
     align-items: center;
 
-    @media screen and (max-width: v-get(media-sm)) {
+    @include respond-below(sm) {
       justify-content: center;
       flex-direction: column;
       background-color: rgba(255, 255, 255, 0.9);
@@ -81,7 +81,7 @@ $headerMaxWidth: 1700px;
   &__item {
     margin: 0 20px;
 
-    @media screen and (max-width: v-get(media-lg)) {
+    @include respond-below(lg) {
       margin: 0 5px;
     }
   }
@@ -92,7 +92,7 @@ $headerMaxWidth: 1700px;
     font-size: $menuFontSize;
     font-weight: bold;
 
-    @media screen and (max-width: v-get(media-lg)) {
+    @include respond-below(lg) {
       font-size: $menuFontSizeTablet;
     }
 
@@ -109,7 +109,7 @@ $headerMaxWidth: 1700px;
   height: 26px;
   width: 35px;
 
-  @media screen and (max-width: v-get(media-sm)) {
+  @include respond-below(sm) {
     display: block;
   }
 
