@@ -8,8 +8,8 @@ import './js/packedges';
 
 import Interface from './js/classes/Interface';
 
-let menuButton = document.getElementsByClassName('mobile-nav-btn')[0];
-let navMenu = document.getElementsByClassName('nav')[0];
+let menuButton = document.querySelector('.mobile-nav-btn');
+let navMenu = document.querySelector('.nav');
 let menuOpen = false;
 
 window.addEventListener('resize', resize);
