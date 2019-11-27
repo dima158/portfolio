@@ -58,10 +58,11 @@ $headerMaxWidth: 1700px;
     position: fixed;
     left: 0; right: 0; top: 0; bottom: 0;
     z-index: -1;
+    display: none;
   }
 
-  &_hide {
-    display: none;
+  &_show {
+    display: block;
   }
 
   &__list {
@@ -103,7 +104,7 @@ $headerMaxWidth: 1700px;
   }
 }
 
-.mobile-nav-btn {
+.burger {
   display: none;
   position: relative;
   height: 26px;
@@ -113,48 +114,48 @@ $headerMaxWidth: 1700px;
     display: block;
   }
 
-  &__inner, &__inner:after, &__inner:before {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 5px;
-    width: 35px;
-    background: black;
-    position: absolute;
-    display: block;
-    content: '';
-    transition: all .5s ease-in-out;
-  }
-
   &__inner {
     position: absolute;
     left: 0;
     top: 10px;
-  }
 
-  &__inner:before {
-    top: -10px;
-  }
+    &, &:after, &:before {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: black;
+      position: absolute;
+      display: block;
+      content: '';
+      transition: all .5s ease-in-out;
+    }
 
-  &__inner:after {
-    bottom: -10px;
+    &:before {
+      top: -10px;
+    }
+
+    &:after {
+      bottom: -10px;
+    }
   }
 
   &_active {
 
-    .mobile-nav-btn__inner, .mobile-nav-btn__inner:after, .mobile-nav-btn__inner:before {
-      top: 5px;
-    }
-
-    .mobile-nav-btn__inner {
+    & .burger__inner {
       background-color: transparent;
-    }
 
-    .mobile-nav-btn__inner:after {
-      transform: rotate(-45deg);
-    }
+      &, &:after, &:before {
+        top: 5px;
+      }
 
-    .mobile-nav-btn__inner:before {
-      transform: rotate(45deg);
+      &:after {
+        transform: rotate(-45deg);
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
     }
   }
 }

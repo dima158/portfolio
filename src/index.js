@@ -8,35 +8,32 @@ import './js/packedges';
 
 import Interface from './js/classes/Interface';
 
-// let menuButton = document.querySelector('.mobile-nav-btn');
-// let navMenu = document.querySelector('.nav');
-// let menuOpen = false;
-//
-// window.addEventListener('resize', resize);
-// menuButton.addEventListener('click', hamburger);
-//
-// function resize() {
-//     let width = window.innerWidth;
-//
-//     if (width <= 768 && menuOpen === false) {
-//         navMenu.classList.add('nav_hide');
-//         menuButton.classList.remove('mobile-nav-btn_active');
-//     } else if (width > 768 && menuOpen === true) {
-//         navMenu.classList.remove('nav_hide');
-//         menuButton.classList.remove('mobile-nav-btn_active');
-//         menuOpen = false;
-//     } else {
-//         navMenu.classList.remove('nav_hide');
-//     }
-// }
-//
-// function hamburger() {
-//     this.classList.toggle('mobile-nav-btn_active');
-//     navMenu.classList.toggle('nav_hide');
-//
-//     menuOpen = navMenu.classList.contains('nav_hide') ? false : true;
-// }
-//
-// resize();
+const menuButton = document.querySelector('.burger');
+const navMenu = document.querySelector('.nav');
+const menuLink = navMenu.querySelectorAll('.nav__link');
+
+window.addEventListener('resize', resize);
+menuButton.addEventListener('click', burgerMenuToggle);
+menuLink.forEach((current) => { current.addEventListener('click', link); });
+
+function resize() {
+    if (innerWidth > 768) burgerMenuClose();
+}
+
+function burgerMenuToggle() {
+    menuButton.classList.toggle('burger_active');
+    navMenu.classList.toggle('nav_show');
+}
+
+function burgerMenuClose() {
+    menuButton.classList.remove('burger_active');
+    navMenu.classList.remove('nav_show');
+}
+
+function link(e) {
+    e.preventDefault();
+    burgerMenuClose();
+    //Links code
+}
 
 Interface.activate(); // Empty
