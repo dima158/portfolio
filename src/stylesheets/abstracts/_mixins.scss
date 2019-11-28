@@ -9,7 +9,7 @@
 
 /// Place child img as a full screen background
 /// @param {Color} $safe-bg-color
-@mixin full-screen-bg($safe-bg-color: white) {
+@mixin full-screen-bg($safe-bg-color: white, $filter: none) {
   position: relative;
   &__background {
     background: $safe-bg-color;
@@ -22,6 +22,9 @@
     height: 100%;
     object-fit: cover;
     z-index: -10;
+    @if $filter != none {
+      filter: $filter;
+    }
   }
 }
 
