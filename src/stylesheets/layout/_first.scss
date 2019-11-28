@@ -15,7 +15,7 @@ $textFontSizePhone: 16px;
   align-items: center;
   height: 100vh;
 
-  @include full-screen-bg(white, black, 0.7);
+  @include full-screen-bg(white, brightness(30%));
 
   &__footer {
     margin-bottom: 70px;
