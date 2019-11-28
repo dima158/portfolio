@@ -14,7 +14,7 @@ const menuLink = navMenu.querySelectorAll('.nav__link');
 
 window.addEventListener('resize', resize);
 menuButton.addEventListener('click', burgerMenuToggle);
-menuLink.forEach((current) => { current.addEventListener('click', link); });
+[...menuLink].forEach((current) => { current.addEventListener('click', link); });
 
 function resize() {
     if (innerWidth > 768) burgerMenuClose();
