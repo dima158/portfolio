@@ -7,5 +7,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding-top: 110px;
+
+    @include respond-below(sm) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
   }
 }
