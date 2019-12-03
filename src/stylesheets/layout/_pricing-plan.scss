@@ -9,5 +9,10 @@
     grid-template-rows: 1fr;
     gap: 30px;
     padding-top: 120px;
+
+    @include respond-below(sm) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
   }
 }
