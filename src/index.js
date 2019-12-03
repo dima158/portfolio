@@ -46,7 +46,7 @@ const projects = document.querySelectorAll('.projects__project');
 });
 
 function portfolio(e) {
-    portfolioButtonActive(e);
+    portfolioButtonActive(e.target);
     if (e.target.dataset.cat === 'all') {
         [...projects].forEach(function (element) {
             element.classList.remove('projects__project_hide');
