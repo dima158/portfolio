@@ -1,5 +1,3 @@
-$title-font-size: 20px;
-
 .advantage {
   display: flex;
   flex-direction: column;
@@ -12,7 +10,7 @@ $title-font-size: 20px;
   }
 
   &__heading {
-    font-size: $title-font-size;
+    font-size: v(heading-font-size);
     font-weight: 600;
     margin-top: 30px;
     max-width: 260px;

@@ -10,7 +10,7 @@
 
     @include respond-below(sm) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
     }
   }
 }
