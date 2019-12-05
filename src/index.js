@@ -72,4 +72,67 @@ function portfolioButtonActive(element) {
     });
 }
 
+// -----Slider-----
+const slider = document.querySelector('.members__list');
+const sliderItemsCount = slider.querySelectorAll('.members__person').length;
+const sliderDots = document.querySelector('.members__slider-dots');
+let sliderItemWidth = slider.querySelector('.members__person').offsetWidth;
+let sliderBtnCount = Math.ceil(sliderItemsCount / (slider.offsetWidth / sliderItemWidth));
+let sliderBtn = [];
+
+sliderAddDots();
+
+function sliderMove(offset) {
+    let sliderLeft = slider.offsetWidth * +offset;
+    slider.style.transform = 'translateX(' + -sliderLeft + 'px)';
+}
+
+function sliderDotsActive(event) {
+    [...sliderBtn].forEach((current) => {
+        if (current === event.target) {
+            current.classList.add('members__slider-btn_active');
+        } else {
+            current.classList.remove('members__slider-btn_active');
+        }
+    });
+    sliderMove(event.target.dataset.slider);
+}
+
+function sliderAddDots() {
+    sliderBtn.length = 0;
+    sliderDots.innerHTML = '';
+    for (let i = 0; i < sliderBtnCount; i++) {
+        let btn = document.createElement('button');
+        btn.classList.add('members__slider-btn');
+        if (i === 0) btn.classList.add('members__slider-btn_active');
+        btn.dataset.slider = i;
+        sliderDots.append(btn);
+        btn.addEventListener('click', sliderDotsActive);
+        sliderBtn.push(btn);
+    }
+}
+
+function resizeSlider() {
+    let currentOffset = document.querySelector('.members__slider-btn_active').dataset.slider;
+    let itemWidth = slider.querySelector('.members__person').offsetWidth;
+    let btnCount = Math.ceil(sliderItemsCount / (slider.offsetWidth / itemWidth));
+
+    sliderItemWidth = itemWidth;
+    if (btnCount !== sliderBtnCount) {
+        slider.style.transform = 'translateX(0)';
+        sliderBtnCount = btnCount;
+        sliderAddDots();
+    } else {
+        sliderMove(currentOffset);
+    }
+}
+
+// -----Resize-----
+window.addEventListener('resize', resizeEvent);
+
+function resizeEvent() {
+    resizeSlider();
+}
+
+
 Interface.activate(); // Empty
