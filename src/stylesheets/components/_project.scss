@@ -2,10 +2,10 @@
   max-width: 340px;
   position: relative;
 
-  &__link {
+  &__card {
     display: block;
 
-    &:hover .project__hover {
+    &:hover .project__wrap {
       opacity: 1;
     }
   }
@@ -15,7 +15,7 @@
     width: 100%;
   }
 
-  &__hover {
+  &__wrap {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     background-color: rgba(0, 0, 0, .6);
