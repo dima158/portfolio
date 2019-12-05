@@ -134,5 +134,22 @@ function resizeEvent() {
     resizeSlider();
 }
 
+// -----Instagram Photo-----
+async function getPhoto() {
+    const article = document.querySelectorAll('.article');
+    const data = await fetch('https://www.instagram.com/website_of_the_day/?__a=1')
+        .then(response => response.json())
+        .then(data => data.graphql.user.edge_owner_to_timeline_media.edges);
+
+    for (let i = 0; i < 3; i++) {
+        const image = article[i].querySelector('.article__img');
+        let img = document.createElement('img');
+        img.src = data[i].node.thumbnail_src;
+        img.classList.add('article__background');
+        image.append(img);
+    }
+}
+getPhoto();
+
 
 Interface.activate(); // Empty
