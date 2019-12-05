@@ -12,12 +12,12 @@
   &__heading {
     font-size: v(heading-font-size);
     font-weight: 600;
-    margin-top: 30px;
+    padding-top: 30px;
     max-width: 260px;
   }
 
   &__description {
-    margin-top: 20px;
+    padding-top: 20px;
     max-width: 260px;
   }
 }
