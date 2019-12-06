@@ -7,6 +7,7 @@ import './js/functions'; // Empty
 import './js/packedges';
 
 import Interface from './js/classes/Interface';
+import Ajax from './js/classes/Ajax';
 
 // -----Burger Menu-----
 const menuButton = document.querySelector('.burger');
@@ -139,9 +140,8 @@ window.addEventListener('resize', resizeEvent);
 // -----Instagram Photo-----
 async function getPhoto() {
   const article = document.querySelectorAll('.article');
-  const photos = await fetch('https://www.instagram.com/website_of_the_day/?__a=1')
-    .then(response => response.json())
-    .then(data => data.graphql.user.edge_owner_to_timeline_media.edges);
+  const data = await Ajax.get('https://www.instagram.com/website_of_the_day/?__a=1');
+  const photos = data.graphql.user.edge_owner_to_timeline_media.edges;
 
   for (let i = 0; i < 3; i++) {
     const image = article[i].querySelector('.article__img');
