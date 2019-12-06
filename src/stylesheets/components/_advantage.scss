@@ -1,3 +1,23 @@
 .advantage {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__icon {
+    width: 70px;
+  }
+
+  &__heading {
+    font-size: v(heading-font-size);
+    font-weight: 600;
+    padding-top: 30px;
+    max-width: 260px;
+  }
+
+  &__description {
+    padding-top: 20px;
+    max-width: 260px;
+  }
 }
