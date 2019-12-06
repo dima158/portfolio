@@ -11,19 +11,21 @@
   font-weight: bold;
 
   @include respond-below(sm) {
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-            'name name name name'
-            'email email email email'
-            'massage massage massage massage'
-            'none none submit submit';
+            'name name'
+            'email email'
+            'massage massage'
+            'none submit';
   }
 
   @include respond-below(xs) {
+    grid-template-columns: 1fr;
     grid-template-areas:
-            'name name name name'
-            'email email email email'
-            'massage massage massage massage'
-            'submit submit submit submit';
+            'name'
+            'email'
+            'massage'
+            'submit';
   }
 
   &__input {
@@ -34,25 +36,27 @@
       font-weight: bold;
     }
 
-    &_type_name {
-      grid-area: name;
-    }
+    &_type {
+      &_name {
+        grid-area: name;
+      }
 
-    &_type_email {
-      grid-area: email;
-    }
+      &_email {
+        grid-area: email;
+      }
 
-    &_type_massage {
-      grid-area: massage;
-      height: 320px;
-    }
+      &_massage {
+        grid-area: massage;
+        height: 320px;
+      }
 
-    &_type_submit {
-      grid-area: submit;
-      text-transform: uppercase;
-      color: #000;
-      font-weight: bold;
-      background-color: v(bg-clr);
+      &_submit {
+        grid-area: submit;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: bold;
+        background-color: v(bg-clr);
+      }
     }
   }
 }
