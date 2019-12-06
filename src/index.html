@@ -612,10 +612,10 @@
           </li>
         </ul>
         <form action="" class="contact-us__form form">
-          <input class="form__name" placeholder="Your NAME">
-          <input class="form__email" placeholder="Your Email">
-          <textarea class="form__massage" placeholder="Write Massage"></textarea>
-          <button class="form__submit">Send</button>
+          <input type="text" required min="3" max="30" name="name" class="form__input form__input_type_name" placeholder="Your NAME">
+          <input type="text" required min="3" max="30" name="email" class="form__input form__input_type_email" placeholder="Your Email">
+          <textarea required minlength="5" maxlength="400" name="massage" class="form__input form__input_type_massage" placeholder="Write Massage"></textarea>
+          <button type="submit" class="form__input form__input_type_submit">Send</button>
         </form>
         <img src="images/contact-us/background.jpg" class="contact-us__background">
       </div>

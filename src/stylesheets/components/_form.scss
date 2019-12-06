@@ -26,33 +26,33 @@
             'submit submit submit submit';
   }
 
-  &__name, &__email, &__massage, &__submit {
+  &__input {
     padding: 25px;
     border-radius: 10px;
 
     &::placeholder {
       font-weight: bold;
     }
-  }
 
-  &__name {
-    grid-area: name;
-  }
+    &_type_name {
+      grid-area: name;
+    }
 
-  &__email {
-    grid-area: email;
-  }
+    &_type_email {
+      grid-area: email;
+    }
 
-  &__massage {
-    grid-area: massage;
-    height: 320px;
-  }
+    &_type_massage {
+      grid-area: massage;
+      height: 320px;
+    }
 
-  &__submit {
-    grid-area: submit;
-    text-transform: uppercase;
-    color: #000;
-    font-weight: bold;
-    background-color: v(bg-clr);
+    &_type_submit {
+      grid-area: submit;
+      text-transform: uppercase;
+      color: #000;
+      font-weight: bold;
+      background-color: v(bg-clr);
+    }
   }
 }
