@@ -31,6 +31,7 @@
   &__input {
     padding: 25px;
     border-radius: 10px;
+    background-color: v(bg-clr);
 
     &::placeholder {
       font-weight: bold;
@@ -53,9 +54,8 @@
       &_submit {
         grid-area: submit;
         text-transform: uppercase;
-        color: #000;
+        color: v(text-clr);
         font-weight: bold;
-        background-color: v(bg-clr);
       }
     }
   }
