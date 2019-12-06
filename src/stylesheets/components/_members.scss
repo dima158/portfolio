@@ -36,7 +36,7 @@
     background-color: v(hover-bg-clr);
 
     &:hover, &_active {
-      background-color: #3949ab;
+      background-color: v(second-brand-clr);
     }
   }
 }

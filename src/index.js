@@ -76,11 +76,11 @@ function portfolio(e) {
 
 // -----Slider-----
 const slider = document.querySelector('.members__list');
-const sliderItemsCount = slider.querySelectorAll('.members__person').length;
+const sliderItemsNumber = slider.querySelectorAll('.members__person').length;
 const sliderDots = document.querySelector('.members__slider-dots');
 const sliderBtns = [];
 let sliderItemWidth = slider.querySelector('.members__person').offsetWidth;
-let sliderBtnCount = Math.ceil(sliderItemsCount / (slider.offsetWidth / sliderItemWidth));
+let sliderBtnsNumber = Math.ceil(sliderItemsNumber / (slider.offsetWidth / sliderItemWidth));
 
 function sliderMove(offset) {
   const sliderLeft = slider.offsetWidth * +offset;
@@ -101,7 +101,7 @@ function sliderDotsActive(event) {
 function sliderAddDots() {
   sliderBtns.length = 0;
   sliderDots.innerHTML = '';
-  for (let i = 0; i < sliderBtnCount; i++) {
+  for (let i = 0; i < sliderBtnsNumber; i++) {
     const btn = document.createElement('button');
     btn.classList.add('members__slider-btn');
     if (i === 0) btn.classList.add('members__slider-btn_active');
@@ -115,12 +115,12 @@ function sliderAddDots() {
 function resizeSlider() {
   const currentOffset = document.querySelector('.members__slider-btn_active').dataset.slider;
   const itemWidth = slider.querySelector('.members__person').offsetWidth;
-  const btnCount = Math.ceil(sliderItemsCount / (slider.offsetWidth / itemWidth));
+  const btnCount = Math.ceil(sliderItemsNumber / (slider.offsetWidth / itemWidth));
 
   sliderItemWidth = itemWidth;
-  if (btnCount !== sliderBtnCount) {
+  if (btnCount !== sliderBtnsNumber) {
     slider.style.transform = 'translateX(0)';
-    sliderBtnCount = btnCount;
+    sliderBtnsNumber = btnCount;
     sliderAddDots();
   } else {
     sliderMove(currentOffset);
