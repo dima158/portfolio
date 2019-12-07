@@ -1,12 +1,24 @@
 .contact-us {
   padding-top: 125px;
   padding-bottom: 110px;
+  color: v(bg-clr);
+
+  @include full-screen-bg(white, brightness(20%));
+
+  &__background {
+    object-position: top center;
+  }
 
   &__contact-list {
     padding-top: 100px;
     padding-bottom: 75px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
+    grid-gap: 10px;
+
+    @include respond-below(sm) {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+    }
   }
 }

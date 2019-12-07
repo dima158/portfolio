@@ -588,30 +588,42 @@
         <ul class="contact-us__contact-list">
           <li class="contact">
             <div class="contact__icon">
-              <i class="icon-location2"></i>
+              <i class="contact__icon-inner icon-location2"></i>
             </div>
-            <div class="contact__info"></div>
+            <div class="contact__info">Nobinagar savar,Dhaka Bangladesh</div>
           </li>
           <li class="contact">
             <div class="contact__icon">
-              <i class="icon-phone"></i>
+              <i class="contact__icon-inner icon-phone"></i>
             </div>
-            <div class="contact__info"></div>
+            <div class="contact__info">
+              <a href="tel:+8801743331996">+8801743331996</a>
+              <a href="tel:+8801928737807">+8801928737807</a>
+            </div>
           </li>
           <li class="contact">
             <div class="contact__icon">
-              <i class="icon-mail"></i>
+              <i class="contact__icon-inner icon-mail"></i>
             </div>
-            <div class="contact__info"></div>
+            <div class="contact__info">
+              <a href="mailto:quickmasud@gmail.com">quickmasud@gmail.com</a>
+              <a href="mailto:quickmasud@yahoo.com">quickmasud@yahoo.com</a>
+            </div>
           </li>
         </ul>
-        <form action="POST" class="contact-us__form form"></form>
+        <form action="" class="contact-us__form form">
+          <input type="text" required min="3" max="30" name="name" class="form__input form__input_type_name" placeholder="Your NAME">
+          <input type="text" required min="3" max="30" name="email" class="form__input form__input_type_email" placeholder="Your Email">
+          <textarea required minlength="5" maxlength="400" name="massage" class="form__input form__input_type_massage" placeholder="Write Massage"></textarea>
+          <button type="submit" class="form__input form__input_type_submit">Send</button>
+        </form>
+        <img src="images/contact-us/background.jpg" class="contact-us__background">
       </div>
     </section>
     <section class="licence">
       <div class="licence__inner container">
         <p class="licence__text">
-          All rights Reserved © 2017
+          All rights Reserved &copy; <time class="licence__year"></time>
         </p>
       </div>
     </section>

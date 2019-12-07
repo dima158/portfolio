@@ -154,4 +154,10 @@ async function getPhoto() {
 
 getPhoto();
 
+// -----Licence Year-----
+const dateYear = new Date().getFullYear();
+const dateBlock = document.querySelector('.licence__year');
+
+dateBlock.innerText = dateYear;
+
 Interface.activate(); // Empty
