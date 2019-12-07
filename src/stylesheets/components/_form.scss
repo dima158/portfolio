@@ -1,0 +1,62 @@
+.form {
+  display: grid;
+  grid-template-areas:
+          'name name email email'
+          'massage massage massage massage'
+          'none none none submit';
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 30px;
+  font-size: v(heading-font-size);
+  font-weight: bold;
+
+  @include respond-below(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+            'name name'
+            'email email'
+            'massage massage'
+            'none submit';
+  }
+
+  @include respond-below(xs) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+            'name'
+            'email'
+            'massage'
+            'submit';
+  }
+
+  &__input {
+    padding: 25px;
+    border-radius: 10px;
+    background-color: v(bg-clr);
+
+    &::placeholder {
+      font-weight: bold;
+    }
+
+    &_type {
+      &_name {
+        grid-area: name;
+      }
+
+      &_email {
+        grid-area: email;
+      }
+
+      &_massage {
+        grid-area: massage;
+        height: 320px;
+      }
+
+      &_submit {
+        grid-area: submit;
+        text-transform: uppercase;
+        color: v(text-clr);
+        font-weight: bold;
+      }
+    }
+  }
+}

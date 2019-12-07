@@ -1,0 +1,112 @@
+.article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-below(sm) {
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+
+  &__img {
+    flex: 0 0 50%;
+    position: relative;
+    height: 400px;
+
+    @include respond-below(md) {
+      height: 250px;
+    }
+
+    @include respond-below(sm) {
+      width: 100%;
+      flex: none;
+      height: 200px;
+      order: -1;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:nth-child(odd) {
+    & .article__img {
+      order: -1;
+    }
+
+    & .article__background {
+      padding-right: 15px;
+
+      @include respond-below(sm) {
+        padding: 0;
+      }
+    }
+
+    & .article__info {
+      padding-left: 15px;
+
+      @include respond-below(sm) {
+        padding: 0;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    & .article__background {
+      padding-left: 15px;
+
+      @include respond-below(sm) {
+        padding: 0;
+      }
+    }
+
+    & .article__info {
+      padding-right: 15px;
+
+      @include respond-below(sm) {
+        padding: 0;
+      }
+    }
+  }
+
+  &__info {
+    flex: 0 0 50%;
+  }
+
+  &__heading {
+    padding: 20px 0;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  &__data {
+    padding-bottom: 30px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  &__date {
+    padding-right: 40px;
+
+    @include respond-below(sm) {
+      padding: 10px 0;
+      display: block;
+    }
+  }
+
+  &__icon {
+    padding-right: 10px;
+  }
+
+  &__content {
+    max-width: 430px;
+  }
+}

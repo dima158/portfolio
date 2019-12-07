@@ -1,0 +1,24 @@
+.contact {
+
+  &__icon {
+    background-color: v(second-brand-clr);
+    border-radius: 100%;
+    width: 110px;
+    height: 110px;
+    padding: 20px;
+    margin: 0 auto;
+
+    &-inner {
+      color: v(bg-clr);
+      font-size: 70px;
+    }
+  }
+
+  &__info {
+    max-width: 250px;
+    font-size: v(heading-font-size);
+    text-align: center;
+    padding-top: 40px;
+    margin: 0 auto;
+  }
+}

@@ -1,3 +1,75 @@
 .projects {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 110px 0;
+
+    @include respond-below(md) {
+      padding: 60px 0;
+    }
+
+    @include respond-below(xs) {
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__filter-item {
+    margin: 8px 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 40px;
+    border: 2px solid v(hover-bg-clr);
+    transition: background-color .3s ease, color .3s ease;
+
+    &:hover, &_active {
+      color: v(hover-text-clr);
+      background-color: v(hover-bg-clr);
+      cursor: pointer;
+    }
+
+    @include respond-below(sm) {
+      padding: 15px 20px;
+    }
+
+    @include respond-below(xs) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include respond-below(lg) {
+      max-width: 720px;
+    }
+
+    @include respond-below(sm) {
+      max-width: 360px;
+    }
+  }
+
+  &__project {
+    margin: 10px;
+
+    &_hide {
+      display: none;
+    }
+  }
+
+  &__view-all {
+    margin-top: 115px;
+  }
 }
