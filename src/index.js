@@ -24,20 +24,13 @@ function burgerMenuClose() {
   navMenu.classList.remove('nav_show');
 }
 
-function resize() {
+function resizeBurger() {
   if (window.innerWidth > 768) burgerMenuClose();
 }
 
-function link(e) {
-  e.preventDefault();
-  burgerMenuClose();
-  //Links code
-}
-
-window.addEventListener('resize', resize);
 menuButton.addEventListener('click', burgerMenuToggle);
 [...menuLink].forEach(current => {
-  current.addEventListener('click', link);
+  current.addEventListener('click', burgerMenuClose);
 });
 
 // -----Projects Section-----
@@ -132,6 +125,7 @@ sliderAddDots();
 
 // -----Resize-----
 function resizeEvent() {
+  resizeBurger();
   resizeSlider();
 }
 
